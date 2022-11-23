@@ -22,7 +22,16 @@ simpleGit()
   .add("./*")
   .commit("first commit!")
   .addRemote("origin", gitHubUrl)
-  .push("origin", "feature");
+ simpleGit()
+  .push("origin", "main")
+  .then(
+    (success) => {
+      console.log("repo successfully pushed!");
+    },
+    (failed) => {
+      console.log("repo push failed");
+    }
+  );
 // Add remore repo url as origin to repo
 // simpleGitPromise.addRemote('origin',gitHubUrl);
 // Add all files for commit
