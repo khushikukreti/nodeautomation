@@ -3,7 +3,7 @@ const simpleGit = require("simple-git")();
 // Shelljs package for running shell tasks optional
 const shellJs = require("shelljs");
 // Simple Git with Promise for handling success and failure
-const simpleGitPromise = require("simple-git/promise")();
+const simpleGitPromise = require("simple-git")();
 // change current directory to repo directory in local
 // shellJs.cd('path/to/repo/folder');
 // Repo name
