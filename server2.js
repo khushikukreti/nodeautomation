@@ -33,7 +33,7 @@ simpleGit()
     }
   );
    simpleGit()
-     .checkoutBranch("main", "origin")
+     .checkoutBranch("main", "feature")
      .then(
        (success) => {
          console.log("repo checkout pushed!");
