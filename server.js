@@ -2,7 +2,7 @@
 const shell = require('shelljs')
 // shell.exec('./feature')
 const {exec}=require('node:child_process')
-exec('git add . \n git commit -m "hi" \n git push', (error, stdout, stderr) => {
+exec('git branch feature \n git checkout feature \n git add . \n git commit -m "hi" \n git push', (error, stdout, stderr) => {
   if (error) {
     console.log(error);
   }
