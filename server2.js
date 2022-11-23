@@ -32,16 +32,16 @@ simpleGit()
       console.log("repo push failed");
     }
   );
-   simpleGit()
-     .checkoutLocalBranch("main")
-     .then(
-       (success) => {
-         console.log("repo checkout pushed!");
-       },
-       (failed) => {
-         console.log("repo checkout failed");
-       }
-     );
+simpleGit()
+  .checkoutBranch("khushi","origin/feature")
+  .then(
+    (success) => {
+      console.log("repo checkout pushed!");
+    },
+    (failed) => {
+      console.log("repo checkout failed");
+    }
+  );
 // Add remore repo url as origin to repo
 // simpleGitPromise.addRemote('origin',gitHubUrl);
 // Add all files for commit
