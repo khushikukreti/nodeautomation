@@ -36,10 +36,10 @@ simpleGit()
      .checkout("main")
      .then(
        (success) => {
-         console.log("repo successfully pushed!");
+         console.log("repo checkout pushed!");
        },
        (failed) => {
-         console.log("repo push failed");
+         console.log("repo checkout failed");
        }
      );
 // Add remore repo url as origin to repo
