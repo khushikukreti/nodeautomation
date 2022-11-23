@@ -34,10 +34,10 @@ simpleGit.addConfig('user.name','khushikukreti');
      }, (failed) => {
         console.log('failed commmit');
  });
-// // Finally push to online repository
-//  simpleGitPromise.push('origin','master')
-//     .then((success) => {
-//        console.log('repo successfully pushed');
-//     },(failed)=> {
-//        console.log('repo push failed');
-//  });
+// Finally push to online repository
+ simpleGitPromise.push('origin','master')
+    .then((success) => {
+       console.log('repo successfully pushed');
+    },(failed)=> {
+       console.log('repo push failed');
+ });
