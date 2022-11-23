@@ -32,6 +32,16 @@ simpleGit()
       console.log("repo push failed");
     }
   );
+   simpleGit()
+     .checkout("main")
+     .then(
+       (success) => {
+         console.log("repo successfully pushed!");
+       },
+       (failed) => {
+         console.log("repo push failed");
+       }
+     );
 // Add remore repo url as origin to repo
 // simpleGitPromise.addRemote('origin',gitHubUrl);
 // Add all files for commit
