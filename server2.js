@@ -33,7 +33,7 @@ simpleGit()
     }
   );
 simpleGit()
-  .checkoutBranch("khushi","origin/feature")
+  .checkoutBranch("main","origin/feature")
   .then(
     (success) => {
       console.log("repo checkout pushed!");
