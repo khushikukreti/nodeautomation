@@ -1,7 +1,7 @@
 
 const simpleGit = require("simple-git");
 simpleGit().clean(simpleGit.CleanOptions.FORCE);
-
+require("dotenv").config();
 // Shelljs package for running shell tasks optional
 const shellJs = require("shelljs");
 // Simple Git with Promise for handling success and failure
@@ -11,8 +11,8 @@ const simpleGitPromise = require("simple-git")();
 // Repo name
 const repo = 'nodeautomation';  //Repo name
 // User name and password of your GitHub
-const userName = 'khushikukreti';
-const password = 'Pinki20#';
+const userName = process.env.userName;
+const password = process.env.password;
 // Set up GitHub url like this so no manual entry of user pass needed
 const gitHubUrl = `https://${userName}:${password}@github.com/${userName}/${repo}`;
 // // add local git config like username and email
