@@ -48,9 +48,10 @@ simpleGit()
 //     },(failed)=> {
 //        console.log('repo push failed');
 //  });
-simpleGitPromise.checkout('main')
-    .then((success) => {
-       console.log('repo successfully checkout');
-    },(failed)=> {
-       console.log('repo checkout failed',failed);
- });
+
+// simpleGitPromise.checkout('main')
+//     .then((success) => {
+//        console.log('repo successfully checkout');
+//     },(failed)=> {
+//        console.log('repo checkout failed',failed);
+//  });
