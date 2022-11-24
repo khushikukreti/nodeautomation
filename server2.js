@@ -19,7 +19,7 @@ const gitHubUrl = `https://${userName}:${password}@github.com/${userName}/${repo
 simpleGit().addConfig('user.email','khushikukreti20@gmail.com');
 simpleGit().addConfig('user.name','khushikukreti');
 simpleGit()
-  .add("./*")
+  .add(".")
   .commit("first commit!")
   .addRemote("origin", gitHubUrl)
  simpleGit()
