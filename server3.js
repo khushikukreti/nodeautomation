@@ -13,24 +13,27 @@ simpleGit().addConfig("user.name", "khushikukreti");
 const add = async () => {
   simpleGit().add("./*");
 };
-simpleGit().add("./*").commit("first commit!").addRemote("origin", gitHubUrl);
-simpleGit()
-  .push()
-  .then(
-    (success) => {
-      simpleGit()
-        .checkout("feature")
-        .then(
-          (success) => {
-            console.log("checkedout ");
-          },
-          (failed) => {
-            console.log(failed);
-          }
-        );
-      console.log("repo successfully pushed");
-    },
-    (failed) => {
-      console.log("repo push failed");
-    }
-  );
+// simpleGit()
+//   .add(".")
+//   .commit("first commit!")
+//   .addRemote("origin", gitHubUrl)
+// simpleGit().push()
+//     .then((success) => {
+//         simpleGit().checkout('main').then((success)=>{
+//         console.log('checkedout ');
+//         },(failed)=>{
+//             console.log(failed);
+//         })
+//        console.log('repo successfully pushed');
+//     },(failed)=> {
+//        console.log('repo push failed');
+//  })
+
+async function checkoutandcommit() {
+  const add = await simpleGit().add(".");
+  const commit = await simpleGit().commit("hello");
+  const addremote = await simpleGit().addRemote("origin", gitHubUrl);
+  const push = await simpleGit().push();
+  const checkout = await simpleGit().checkout("main");
+}
+checkoutandcommit();
