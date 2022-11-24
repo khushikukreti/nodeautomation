@@ -16,5 +16,5 @@ const add = async () => {
 simpleGit()
   .add(".")
   .commit("first commit!")
-  .addRemote("origin", "some-repo-url")
+  .addRemote("origin", gitHubUrl)
   .push(["-u", "origin", "main"], () => console.log("done"));
