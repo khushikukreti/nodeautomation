@@ -11,6 +11,7 @@ const simpleGitPromise = require("simple-git")();
 // Repo name
 const repo = 'nodeautomation';  //Repo name
 // User name and password of your GitHub
+console.log(process.env.userName);
 const userName = process.env.userName;
 const password = process.env.password;
 // Set up GitHub url like this so no manual entry of user pass needed
