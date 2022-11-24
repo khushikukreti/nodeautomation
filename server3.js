@@ -4,15 +4,11 @@ const dotenv = require("dotenv").config();
 const shellJs = require("shelljs");
 const simpleGitPromise = require("simple-git")();
 const repo = "nodeautomation"; //Repo name
-console.log(process.env.NAME);
 const userName = process.env.NAME;
 const password = process.env.PASSWORD;
 const gitHubUrl = `https://${userName}:${password}@github.com/${userName}/${repo}`;
 simpleGit().addConfig("user.email", "khushikukreti20@gmail.com");
 simpleGit().addConfig("user.name", "khushikukreti");
-const add = async () => {
-  simpleGit().add("./*");
-};
 // simpleGit()
 //   .add(".")
 //   .commit("first commit!")
@@ -28,7 +24,7 @@ const add = async () => {
 //     },(failed)=> {
 //        console.log('repo push failed');
 //  })
-
+// hi
  async function checkoutandcommit (){
     const add = await simpleGit().add(".")
     const commit = await simpleGit().commit("hello");
