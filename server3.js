@@ -17,4 +17,4 @@ simpleGit()
   .add(".")
   .commit("first commit!")
   .addRemote("origin", gitHubUrl)
-  .push(["-u", "origin", "main"], () => console.log("done"));
+  .push(["-u", "origin", "feature"], () => console.log("done"));
