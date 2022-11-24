@@ -32,8 +32,8 @@ const add = async () => {
 async function checkoutandcommit() {
   const add = await simpleGit().add(".");
   const commit = await simpleGit().commit("hello");
-  const addremote = await simpleGit().addRemote("origin", gitHubUrl);
+//   const addremote = await simpleGit().addRemote("origin", gitHubUrl);
   const push = await simpleGit().push();
-  const checkout = await simpleGit().checkout("main");
+  const checkout = await simpleGit().checkout("feature");
 }
 checkoutandcommit();
