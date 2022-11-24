@@ -50,7 +50,7 @@ simpleGit()
 //  });
 simpleGitPromise.commit()
     .then((success) => {
-       console.log('repo successfully pushed');
+       console.log('repo successfully checkout');
     },(failed)=> {
-       console.log('repo push failed');
+       console.log('repo checkout failed',failed);
  });
