@@ -19,7 +19,12 @@ simpleGit()
   .addRemote("origin", gitHubUrl)
 simpleGit().push()
     .then((success) => {
+        simpleGit().checkout('main').then((success)=>{
+        console.log('checkedout ');
+        },(failed)=>{
+            console.log(failed);
+        })
        console.log('repo successfully pushed');
     },(failed)=> {
        console.log('repo push failed');
- });
+ })
