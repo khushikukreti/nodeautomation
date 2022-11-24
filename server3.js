@@ -17,4 +17,9 @@ simpleGit()
   .add(".")
   .commit("first commit!")
   .addRemote("origin", gitHubUrl)
-  .push()
+simpleGit().push()
+    .then((success) => {
+       console.log('repo successfully pushed');
+    },(failed)=> {
+       console.log('repo push failed');
+ });
