@@ -19,29 +19,10 @@ const gitHubUrl = `https://${userName}:${password}@github.com/${userName}/${repo
 simpleGit().addConfig('user.email','khushikukreti20@gmail.com');
 simpleGit().addConfig('user.name','khushikukreti');
 simpleGit()
-  .add(".")
+  .add("./*")
   .commit("first commit!")
   .addRemote("origin", gitHubUrl)
- simpleGit()
-  .push("origin", "feature")
-  .then(
-    (success) => {
-      console.log("repo successfully pushed!");
-    },
-    (failed) => {
-      console.log("repo push failed");
-    }
-  );
-simpleGit()
-  .checkoutBranch("main","origin/feature")
-  .then(
-    (success) => {
-      console.log("repo checkout pushed!");
-    },
-    (failed) => {
-      console.log("repo checkout failed");
-    }
-  );
+  .push("origin", "feature");
 // Add remore repo url as origin to repo
 // simpleGitPromise.addRemote('origin',gitHubUrl);
 // Add all files for commit
