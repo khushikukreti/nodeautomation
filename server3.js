@@ -19,7 +19,7 @@ simpleGit()
   .then(
     (success) => {
       simpleGit()
-        .checkout("main")
+        .checkout("feature")
         .then(
           (success) => {
             console.log("checkedout ");
